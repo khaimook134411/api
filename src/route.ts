@@ -1,10 +1,10 @@
 import { RouteConfig } from "./types/proxy";
 
-export const ROUTES : RouteConfig[]= [
+export const ROUTES: RouteConfig[] = [
   {
     url: "/free",
     auth: false,
-    creditCheck: false,
+    creditCheck: true,
     rateLimit: {
       windowMs: 15 * 60 * 1000,
       max: 5,

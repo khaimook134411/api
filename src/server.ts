@@ -4,6 +4,7 @@ import { setupProxies } from "./proxy";
 import { ROUTES } from "./route";
 import { setUpAuth } from "./auth";
 import { setupRateLimit } from "./ratelimit";
+import { setupCreditCheck } from "./creditcheck";
 
 const app: Express = express();
 const port = process.env.PORT || 3000;
@@ -11,6 +12,7 @@ const port = process.env.PORT || 3000;
 setupLogging(app);
 setupRateLimit(app, ROUTES);
 setUpAuth(app, ROUTES);
+setupCreditCheck(app, ROUTES);
 setupProxies(app, ROUTES);
 
 app.get("/hello", (req: Request, resp: Response) => {
