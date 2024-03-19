@@ -1,4 +1,6 @@
-export const ROUTES = [
+import { RouteConfig } from "./types/proxy";
+
+export const ROUTES : RouteConfig[]= [
   {
     url: "/free",
     auth: false,
